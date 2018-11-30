@@ -1,11 +1,10 @@
 #pragma once
 
 #include <iostream>
-using namespace std;
 
 int main()
 {
-	int var = 0;
+	std::cout << "Hello World" << std::endl;
 
 	return EXIT_SUCCESS;
 }
