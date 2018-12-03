@@ -1,18 +1,19 @@
-#pragma once
+#ifndef SHIP_H
+#define SHIP_H
 
+#include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 
-using namespace sf;
-
-#define SHIP_SPEED 5
-
-class Ship : RectangleShape
-{
+class Ship {
 public:
-	Ship();
-	~Ship();
+	int x;
+	int y;
+	double angle;
+	sf::ConvexShape shape;
 
-
-private:
-	unsigned const int speed;
+	Ship(int posX, int posY);
+	double rotate(sf::Vector2i mousePos);
+	void move(int direction);
 };
+
+#endif
