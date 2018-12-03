@@ -7,7 +7,6 @@ using namespace sf;
 
 int main()
 {
-	RenderWindow win(VideoMode(1000, 600), "Asteroid Shooter!");
 
 	while (win.isOpen())
 	{

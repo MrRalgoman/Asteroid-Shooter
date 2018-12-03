@@ -16,12 +16,13 @@ public:
 	~Game();
 
 	bool initialize();
-	void endRound();
 	void startRound();
-	void addBullet();
+	void endRound();
+	void newBulletEvent();
 	void think();
 private:
+	RenderWindow window;
 	Player ply;
-	vector<Bullet> bullets;
+	vector<Bullet> blts;
 	vector<Asteroid> enemies;
 };
