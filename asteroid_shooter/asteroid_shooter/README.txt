@@ -1,3 +1,3 @@
 Asteroid Shooter
 
-Team Members: Lucas Mason, Sean Roberts, Setenway Guner
+Team Members: Lucas Mason, Sean Roberts, Setenay Guner
