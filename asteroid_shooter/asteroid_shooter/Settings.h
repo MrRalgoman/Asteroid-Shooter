@@ -6,7 +6,7 @@
 
 #define SHIP_YPOS (WIN_H - 35.0)
 #define SHIP_SPEED 5
-#define SHIP_SIZE 20
+#define SHIP_SIZE 32
 #define SHIP_PTCOUNT 4 // Have to hardcode Ship point positions, don't change this
 #define SHIP_FIRE_CD 0.5
 
@@ -15,3 +15,8 @@
 #define BLT_SPEED 7
 #define BLT_W 3
 #define BLT_H 10
+
+#define AST_SIZE_BIG 15
+#define AST_SIZE_MED 10
+#define AST_SIZE_SML 5
+#define AST_SPEED 3

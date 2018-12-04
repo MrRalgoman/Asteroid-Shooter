@@ -19,7 +19,6 @@ public:
 
 	void startRound();
 	void endRound();
-	void bulletShot();
 	void think();
 private:
 	RenderWindow window;

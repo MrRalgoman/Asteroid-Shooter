@@ -25,5 +25,5 @@ float Bullet::getSpeed() const
 // Bullet think function
 void Bullet::think()
 {
-	this->setPosition(this->getPosition().x, this->getPosition().y - this->getSpeed());
+	this->move(0, -this->getSpeed());
 }
