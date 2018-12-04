@@ -36,27 +36,26 @@ float Ship::getFireCD() const
 }
 
 // Gets Ship last fire
-time_t Ship::getLastFire() const
+clock_t Ship::getLastFire() const
 {
 	return this->lastFire;
 }
 
 // Sets Ship last fire
-void Ship::setLastFire(const time_t &time)
+void Ship::setLastFire(const clock_t &time)
 {
 	this->lastFire = time;
 }
 
 // Fires bullet from Ship pos
-void Ship::fire(vector<Bullet> blts)
+void Ship::fire(vector<Bullet> &blts) // https://stackoverflow.com/questions/3220477/how-to-use-clock-in-c
 {
-	if (this->getLastFire() + this->getFireCD() >= time_t())
+	if ((clock() - this->getLastFire()) / (double)CLOCKS_PER_SEC >= this->getFireCD())
 	{
 		blts.push_back(Bullet(this->getPosition().x));
-	}
 
-	time_t now;
-	this->setLastFire(now);
+		this->setLastFire(clock());
+	}
 }
 
 // Moves Ship right based on Ship speed
@@ -92,7 +91,7 @@ bool Ship::isHit()
 }
 
 // Ship think hook, handles user input
-void Ship::think(vector<Bullet> blts)
+void Ship::think(vector<Bullet> &blts)
 {
 	if (Keyboard::isKeyPressed(Keyboard::A))
 		this->moveLeft();

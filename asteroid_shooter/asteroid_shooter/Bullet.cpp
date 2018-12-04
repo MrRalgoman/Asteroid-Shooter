@@ -3,12 +3,9 @@
 // Bullet constructor
 Bullet::Bullet(const float &xPos) : RectangleShape(Vector2f(BLT_W, BLT_H))
 {
-	cout << "Inside Bullet::Bullet()" << endl;
 	this->speed = BLT_SPEED;
 
-	this->setOutlineColor(Color::White);
-	this->setFillColor(Color::Black);
-	this->setOutlineThickness(3);
+	this->setFillColor(Color::White);
 
 	this->setPosition(xPos, SHIP_YPOS);
 }
@@ -26,12 +23,7 @@ float Bullet::getSpeed() const
 }
 
 // Bullet think function
-void Bullet::think(vector<Bullet> blts)
+void Bullet::think()
 {
 	this->setPosition(this->getPosition().x, this->getPosition().y - this->getSpeed());
-
-	cout << "Inside Bullet::think()" << endl;
-
-	if (this->getPosition().y <= -BLT_H)
-		blts.pop_back();
 }

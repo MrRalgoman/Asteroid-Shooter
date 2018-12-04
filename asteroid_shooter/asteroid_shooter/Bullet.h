@@ -19,7 +19,7 @@ public:
 
 	float getSpeed() const;
 
-	void think(vector<Bullet> blts);
+	void think();
 private:
 	float speed;
 };
