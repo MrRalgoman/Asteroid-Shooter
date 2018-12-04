@@ -15,10 +15,11 @@ public:
 	Game();
 	~Game();
 
-	bool initialize();
+	RenderWindow &getWin();
+
 	void startRound();
 	void endRound();
-	void newBulletEvent();
+	void bulletShot();
 	void think();
 private:
 	RenderWindow window;

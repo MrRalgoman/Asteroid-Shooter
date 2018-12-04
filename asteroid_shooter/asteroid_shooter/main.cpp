@@ -1,25 +1,16 @@
 #pragma once
 
-#include <iostream>
-#include <SFML/Graphics.hpp>
+#include "Game.h"
 
 using namespace sf;
 
 int main()
 {
-
-	while (win.isOpen())
+	Game game;
+	
+	while (game.getWin().isOpen())
 	{
-		Event event;
-
-		while (win.pollEvent(event))
-		{
-			if (event.type == Event::Closed)
-				win.close();
-		}
-
-		win.clear();
-		win.display();
+		game.think();
 	}
 
 	return EXIT_SUCCESS;

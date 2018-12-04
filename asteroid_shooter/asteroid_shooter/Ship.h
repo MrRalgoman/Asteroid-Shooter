@@ -3,23 +3,33 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
+#include "Settings.h"
+#include "Bullet.h"
+
 using namespace sf;
 using std::size_t;
 using std::cout;
 using std::endl;
+using std::time_t;
 
-#define SHIP_SPEED 5.0
-
-class Ship : public CircleShape
+class Ship : public ConvexShape
 {
 public:
-	Ship(float radius, size_t ptCount);
+	Ship(size_t ptCount);
+	~Ship();
 
+	virtual float getSpeed() const;
+	virtual float getFireCD() const;
+	virtual time_t getLastFire() const;
+	virtual void setLastFire(const time_t &time);
+
+	virtual void fire(vector<Bullet> blts);
 	virtual void moveRight();
 	virtual void moveLeft();
-	virtual void think();
 	virtual bool isHit();
-	virtual float getSpeed();
+	virtual void think(vector<Bullet> blts);
 private:
-	float speed; // Don't need to track position, CircleShape already has
-};					   // getters and setters for position and bound checking functions
+	float speed;			// Don't need to track position, ConvexShape already has
+	float fireCD;			// getter and setter for pos, also has getter for shape bounds,
+	time_t lastFire;	// have to write our own collision checks.
+};				   

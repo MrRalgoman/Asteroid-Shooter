@@ -1,9 +1,9 @@
 #include "Player.h"
 
 // Player constructor
-Player::Player(float radius, size_t ptCount) : Ship(radius, ptCount)
+Player::Player() : Ship(SHIP_PTCOUNT)
 {
-	this->lives = PLAYER_LIVES;
+	this->lives = PLY_LIVES;
 }
 
 // Player deconstructor
@@ -12,4 +12,8 @@ Player::~Player()
 	cout << "Inside ~Player()" << endl;
 }
 
-unsigned int // here
+// Gets ships lives left
+unsigned int Player::getLives() const
+{
+	return this->lives;
+}
