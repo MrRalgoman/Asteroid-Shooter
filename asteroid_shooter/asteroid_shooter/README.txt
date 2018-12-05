@@ -13,9 +13,9 @@ Instructions:
 
 
 C/C++ -> General -> Additional Include Dir:  C:\SFML-2.5.1\include
-Linker -> General -> Additional Lib Dir:	 C:\SFML-2.5.1\lib
+Linker -> General -> Additional Lib Dir:     C:\SFML-2.5.1\lib
 
 Linker -> Input -> Additional Dependencies:  sfml-system-d.lib;
-											 sfml-main-d.lib;
-											 sfml-graphics-d.lib;
-											 sfml-window-d.lib;
+					     sfml-main-d.lib;
+					     sfml-graphics-d.lib;
+					     sfml-window-d.lib;
