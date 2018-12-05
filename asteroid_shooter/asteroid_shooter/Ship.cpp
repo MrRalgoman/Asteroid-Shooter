@@ -20,7 +20,7 @@ Ship::Ship(size_t ptCount) : ConvexShape(ptCount)
 // Ship deconstructor
 Ship::~Ship()
 {
-	cout << "Inside ~Ship()" << endl;
+	//cout << "Inside ~Ship()" << endl;
 }
 
 // Returns Ship speed
@@ -82,12 +82,6 @@ void Ship::moveLeft()
 	{
 		this->setPosition(this->getPosition().x - this->getSpeed(), SHIP_YPOS);
 	}
-}
-
-// Returns whether the Ship is intersecting passed bounds
-bool Ship::isHit()
-{
-	return false;
 }
 
 // Ship think hook, handles user input

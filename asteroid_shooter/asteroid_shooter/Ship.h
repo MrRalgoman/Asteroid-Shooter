@@ -27,7 +27,6 @@ public:
 	virtual void fire(vector<Bullet> &blts);
 	virtual void moveRight();
 	virtual void moveLeft();
-	virtual bool isHit();
 	virtual void think(vector<Bullet> &blts);
 private:
 	float speed;		// Don't need to track position, ConvexShape already has

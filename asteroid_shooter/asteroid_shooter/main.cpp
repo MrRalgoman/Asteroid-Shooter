@@ -2,18 +2,12 @@
 
 #include "Game.h"
 
-using namespace sf;
-
 int main()
 {
 	std::srand(std::time(nullptr));
 	
 	Game game;
-	
-	while (game.getWin().isOpen())
-	{
-		game.think();
-	}
+	game.start();
 
 	return EXIT_SUCCESS;
 }

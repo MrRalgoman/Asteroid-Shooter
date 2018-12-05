@@ -13,7 +13,7 @@ Bullet::Bullet(const float &xPos) : RectangleShape(Vector2f(BLT_W, BLT_H))
 // Bullet deconstructor
 Bullet::~Bullet()
 {
-	cout << "Inside ~Bullet()" << endl;
+	//cout << "Inside ~Bullet()" << endl;
 }
 
 // Gets Bullet speed
